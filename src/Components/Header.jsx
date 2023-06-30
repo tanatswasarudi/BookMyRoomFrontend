@@ -43,16 +43,16 @@ const Header = () => {
             <span className='font-bold text-2xl'>BMR</span>
                 </Link>
            </div>               
-        <div className="flex items-center cursor-pointer gap-2 rounded-full border border-gray-300 py-2 px-4 shadow-md shadow-gray-300 ">
-               <GiHamburgerMenu className='text-2xl' onClick={handleShowMenu}/> 
+        <div className="flex items-center cursor-pointer gap-2 rounded-full border border-gray-300 py-2 px-4 shadow-md shadow-gray-300 " onClick={handleShowMenu}>
+               <GiHamburgerMenu className='text-2xl' /> 
                <BiSolidUserCircle className='text-2xl'/>  
-         
+         <div className='mt-30 py-3'>
            {
             showMenu && (
-              <div className="absolute  bg-purple-700  right-2 py-1 font-serif w-36  flex items-center flex-col m-auto cursor-pointer shadow rounded min-w-[100px]">   
+              <div className="absolute  bg-purple-700  right-2 py-1  font-serif w-36  flex items-center flex-col m-auto cursor-pointer shadow rounded min-w-[100px]">   
               <nav className='flex items-center flex-col text-base w-32 px-2 py-1 md:text-lg bg-black text-cyan-500 '>
                  {userData.name ? (
-                <p className="mb-6 flex items-center" onClick={handleLogout}><span className="">{userData.name}</span><BiUserMinus className='text-2xl'/> </p>
+                <Link to={"/"} className="mb-6 flex items-center" onClick={handleLogout}><span className="">{userData.name}</span><BiUserMinus className='text-2xl'/> </Link>
                 && <Link to={"account"} className='flex mb-6 items-center'><BiSolidUserAccount className='text-2xl'/>Account</Link>
                   ) : (
                     <Link to={"login"}className="mb-6 flex items-center">  <BiSolidUserCircle className='text-2xl'/>Login </Link>
@@ -71,7 +71,7 @@ const Header = () => {
               </div> 
             )
            }
-          
+          </div>
        </div>
         </header>
   )
