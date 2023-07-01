@@ -53,7 +53,7 @@ console.log(subpage)
     </nav>
     {subpage === 'accommodation'&& (
         <div className="mt-10 w-full">
-            <div className=' items-center grid grid-cols-1 md:grid-cols-2  gap-6 gap-y-8 mt-10 shadow-lg w-full'>
+            <div className=' gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all grid grid-cols-1 md:grid-cols-2   mt-10 shadow-lg w-full'>
             {
             homeProductCartList[0] ?
             homeProductCartList.map(el =>{
@@ -85,7 +85,7 @@ console.log(subpage)
     {
       subpage === 'profile' && (
         <div className='mt-10 flex flex-col items-center justify-center bg-slate-100 shadow'>
-        <div className='font-serif flex items-center'>  <span className='text-2xl text-black '>Hello </span><span className='text-base text-black mb-4'>{userData.name}</span></div>
+        <div className='font-serif inline-flex items-center'>  <span className='text-2xl text-black '>Hello </span><span className='text-base text-black mb-4'> {userData.name}</span></div>
           <p className='text-base my-4 flex items-center'> 
             {
               userData.email ? (
@@ -113,8 +113,8 @@ console.log(subpage)
     }
     {
       subpage === 'booking' && (
-        <div>
-
+        <div className='pt-10 text-lg font-serif text-black'>
+             Coming Soon
         </div>
       )
     }

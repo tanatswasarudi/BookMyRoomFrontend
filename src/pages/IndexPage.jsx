@@ -21,7 +21,7 @@ const DataProduct = useSelector((state)=>state.product.productList)
            <div><Link to={'login'} className=" cursor-pointer"><img src={book} className='' alt=''/></Link></div>  
         </div>
         
-            <div className='flex gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all'>
+            <div className='flex md:grid md:grid-cols-2 gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all'>
             {
             homeProductCartList[0] ?
             homeProductCartList.map(el =>{
