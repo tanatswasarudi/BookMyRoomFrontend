@@ -35,9 +35,9 @@ const Footer = () => {
             <div className="mb-5 pb-4">
             <h4 className="pb-4 text-red-500">Company</h4>
               <p className="text-gray-500">
-              <span className="flex flex-row items-center cursor-pointer font-serif hover:text-yellow-500"><MdEmail/><strong>Email:</strong> tanatswasarudi09@gmail.com</span><br/>
-              <span className="flex flex-row items-center cursor-pointer font-serif hover:text-blue-500"><BsFacebook className="text-blue-500" /><strong>Facebook: </strong> Tanatswa Sarudi</span><br/>
-              <span className="flex flex-row items-center cursor-pointer font-serif hover:text-green-500" onClick={connectWithWhatsApp}><FaWhatsappSquare className="text-2xl text-green-600"/><strong>WhatsApp:</strong> +918264420815</span><br/>
+              <span className="flex flex-row items-center cursor-pointer font-serif hover:text-yellow-500"><MdEmail/><strong>Email:</strong> <span className="text-sm md:text-base">tanatswasarudi09@gmail.com</span></span><br/>
+              <span className="flex flex-row items-center cursor-pointer font-serif hover:text-blue-500"><BsFacebook className="text-blue-500" /><strong>Facebook: </strong> <span className="text-sm md:text-base">Tanatswa Sarudi</span></span><br/>
+              <span className="flex flex-row items-center cursor-pointer font-serif hover:text-green-500" onClick={connectWithWhatsApp}><FaWhatsappSquare className="text-2xl text-green-600"/><strong>WhatsApp:</strong> <span className="text-sm md:text-base">+918264420815</span></span><br/>
               </p>
               
             </div>
@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
         <div className="py-10 ">
           <h4 className="text-yellow-500 hover:text-red-500 ">Developed by: WEBTECH</h4>
-          <p className="flex flex-row items-center font-serif hover:text-red-500 text-gray-500"><MdEmail/><strong>Email:</strong>tanatswasarudi09@gmail.com</p>
+          <p className="flex flex-row items-center font-serif hover:text-red-500 text-gray-500"><MdEmail/><strong>Email:</strong><span className="text-sm md:text-base">tanatswasarudi09@gmail.com</span></p>
           <p className="flex flex-row items-center font-serif hover:text-red-500 text-gray-500" onClick={connectWithWhatsApp}><IoMdCall className="text-blue-500"/> <strong>Call:</strong>+91 826-44208-15 </p>
         </div>
       </div>

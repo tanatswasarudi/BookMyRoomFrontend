@@ -59,7 +59,7 @@ const Booking = () => {
     const [showAllPhotos,setShowAllPhotos] = useState(false)
 
   return (
-    <div className=' bg-gray-100  px-8 py-8 w-full'>
+    <div className=' bg-gray-100 px-4 py-4  md:px-8 md:py-8 w-full'>
       <h1 className='text-3xl px-4'>{productDisplay.title}</h1>
       <a target='_blank' href={'https://maps.google.com/?q='+productDisplay.address} className='px-4 font-semibold underline block mb-2'>{productDisplay.address}</a>
     <div className="relative md:px-8 px-2 w-full">
@@ -106,7 +106,7 @@ const Booking = () => {
   
  
   <div className="md:px-4 px-1 mt-8 gap-8 grid grid-cols-1 md:grid-cols-[2fr_1fr] w-full">
-       <div className="">
+       <div className="w-full">
              <div className='my-4'>
              <h2 className='font-semibold text-lg md:text-2xl'>Description</h2>
               {productDisplay.description}

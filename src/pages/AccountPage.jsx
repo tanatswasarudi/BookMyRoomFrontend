@@ -28,7 +28,7 @@ if (subpage === undefined) {
 console.log(subpage)
  // Function to determine link classes based on the active subpage
  function linkClasses(type = null) {
-    let classes = 'inline-flex items-center py-2 px-6 rounded-full';
+    let classes = 'inline-flex items-center py-2 px-6   rounded-full';
     if (type === subpage || (subpage === undefined && type === 'profile')) {
       classes += ' bg-primary rounded-full';
     }
@@ -40,7 +40,7 @@ console.log(subpage)
       <div className='w-full h-[300px]'>
             <img src={welcome} alt='' className='w-full h-full'/>
            </div>
-    <nav className='w-full flex justify-center gap-2 mt-8'>
+    <nav className='w-full md:flex grid grid-cols-1 justify-center md:gap-2 mt-8 font-serif'>
        <Link className={linkClasses('profile')} to={'/account'}>
         <BiSolidUserCircle/>My Profile
       </Link>
@@ -48,12 +48,12 @@ console.log(subpage)
         <TbBrandBooking/>My Bookings
       </Link>
       <Link className={linkClasses('accommodation')} to={'/account/accommodation'}>
-      <BsBuildingsFill/>My Accommodation
+      <BsBuildingsFill/>My Accomodation
       </Link>
     </nav>
     {subpage === 'accommodation'&& (
-        <div className="mt-10 ">
-            <div className=' items-center grid grid-cols-1 md:grid-cols-2  gap-6 gap-y-8 mt-10 shadow-lg'>
+        <div className="mt-10 w-full">
+            <div className=' items-center grid grid-cols-1 md:grid-cols-2  gap-6 gap-y-8 mt-10 shadow-lg w-full'>
             {
             homeProductCartList[0] ?
             homeProductCartList.map(el =>{
@@ -84,13 +84,37 @@ console.log(subpage)
     )}
     {
       subpage === 'profile' && (
-        <div className='mt-10 flex flex-col items-center justify-center'>
-          <span className='text-2xl text-blue-500'>Hello </span><span className='text-base text-black mb-4'>{userData.name}</span>
-          <p className='text-base mb-4'> 
+        <div className='mt-10 flex flex-col items-center justify-center bg-slate-100 shadow'>
+        <div className='font-serif flex items-center'>  <span className='text-2xl text-black '>Hello </span><span className='text-base text-black mb-4'>{userData.name}</span></div>
+          <p className='text-base my-4 flex items-center'> 
+            {
+              userData.email ? (
+                <p>You are currently logged in as {userData.email}</p>
+              ) : (
+                <span className='px-4 py-2 rounded shadow border border-primary'>
+                  <Link to={"login"} className=''>Login</Link>
+                </span>
+                    
+              )
+            }
           
-          You are currently logged in as ({userData.email})
           </p>
-           <button onClick={handleLogout} className='w-[150px] flex p-2 items-center rounded-full shadow bg-primary '><BiUserMinus/>Logout({userData.name})</button>
+          {
+            userData.name ? (
+              <button onClick={handleLogout} className='w-[150px] flex p-2 items-center rounded-full shadow bg-primary '><BiUserMinus/>Logout({userData.name})</button>
+            ) : (
+              <button className='hidden w-[150px]  p-2 items-center rounded-full border-t border-yellow-500 shadow bg-primary'><Link to={"login"}><BiSolidUserCircle/>Login</Link></button>
+              
+            )
+          }
+           
+        </div>
+      )
+    }
+    {
+      subpage === 'booking' && (
+        <div>
+
         </div>
       )
     }

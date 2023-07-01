@@ -14,14 +14,14 @@ const DataProduct = useSelector((state)=>state.product.productList)
 
   
   return (
-    <div>
-       <div>
-       <div className='mb-4 flex justify-between cursor-pointer '>
-           <img src={banner} className='' alt=''/>
-          <Link to={'login'} className="px-8 cursor-pointer"><img src={book} className='' alt=''/></Link>
+    <div className='w-full'>
+       <div className='w-full'>
+       <div className='mb-4 grid md:grid-cols-2 grid-cols-1 gap-2 cursor-pointer w-full '>
+           <div><img src={banner} className='' alt=''/></div>
+           <div><Link to={'login'} className=" cursor-pointer"><img src={book} className='' alt=''/></Link></div>  
         </div>
         
-            <div className='mt-8 mb-4 grid grid-cols-1 md:grid-cols-2  gap-6 gap-y-8'>
+            <div className='md:px-4 mt-8 mb-4 grid grid-cols-1 md:grid-cols-2 gap-6 w-full'>
             {
             homeProductCartList[0] ?
             homeProductCartList.map(el =>{

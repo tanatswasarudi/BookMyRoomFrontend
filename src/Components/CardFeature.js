@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const CardFeature = ({title,address,photos,price, description,id,loadingArray}) => {
   return (
-    <div className='cursor-pointer w-full min-w-[300px] max-w-[300px] md:min-w-[500px] md:max-w-[500px] gap-3 shadow rounded-2xl py-5 px-4 flex flex-col'>
+    <div className='cursor-pointer w-full min-w-[200px] max-w-[300px] md:min-w-[500px] md:max-w-[500px] gap-3 shadow rounded-2xl py-5 md:px-4 flex flex-col overflow-scroll scrollbar-none'>
          {title ? (
         <>
         <Link to={ `/booking/${id}`} onClick={()=>window.scrollTo({top:"0",behavior : "smooth"})} className='flex flex-col cursor-pointer bg-gray-100 p-2 rounded-2xl'>
@@ -46,7 +46,7 @@ const CardFeature = ({title,address,photos,price, description,id,loadingArray}) 
         </Link>
        </> 
     ) :(
-        <div className="flex justify-center font-serif items-center">
+        <div className="flex justify-center font-serif items-center ">
         <p>{loadingArray}</p>
         </div>
     )}
