@@ -59,7 +59,7 @@ const Header = () => {
                   )}
                   {
                     userData.email === process.env.REACT_APP_ADMIN_EMAIL && (
-                      <Link to={"newproduct"} className="mb-6 flex items-center">
+                      <Link to={"placespage"} className="mb-6 flex items-center">
                       <MdProductionQuantityLimits/>
                           Add Apartment
                     </Link>

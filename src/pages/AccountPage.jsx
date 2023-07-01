@@ -101,7 +101,7 @@ console.log(subpage)
           </p>
           {
             userData.name ? (
-              <button onClick={handleLogout} className='w-[150px] flex p-2 items-center rounded-full shadow bg-primary '><BiUserMinus/>Logout({userData.name})</button>
+              <Link to={"login"} onClick={handleLogout} className='w-[150px] flex p-2 items-center rounded-full shadow bg-primary '><BiUserMinus/>Logout({userData.name})</Link>
             ) : (
               <button className='hidden w-[150px]  p-2 items-center rounded-full border-t border-yellow-500 shadow bg-primary'><Link to={"login"}><BiSolidUserCircle/>Login</Link></button>
               
