@@ -21,7 +21,7 @@ const DataProduct = useSelector((state)=>state.product.productList)
            <div><Link to={'login'} className=" cursor-pointer"><img src={book} className='' alt=''/></Link></div>  
         </div>
         
-            <div className='md:px-4 mt-8 mb-4 grid grid-cols-1 md:grid-cols-2 gap-6 w-full'>
+            <div className='md:px-4 px-2 mt-8 mb-4 justify-center grid grid-cols-1 md:grid-cols-2 gap-6 w-full'>
             {
             homeProductCartList[0] ?
             homeProductCartList.map(el =>{
