@@ -10,14 +10,11 @@ import {BiChevronRight} from 'react-icons/bi'
 
 const Footer = () => {
   const connectWithWhatsApp = () => {
-    // Replace the following with your WhatsApp number
-    const phoneNumber = '+917681998121';
-
     // Create the WhatsApp URL
-    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
-
+    const message = `Hello, l would like to know more about your Apartments`;
+    const URL = `https://wa.me/+917681998121?text=${encodeURIComponent(message)}`;
     // Open the WhatsApp URL
-    window.open(url);
+    window.open(URL);
   }
 
   const phoneNumber = '+91 7681998121'; // Replace with the desired recipient's phone number
@@ -42,7 +39,7 @@ const Footer = () => {
               
             </div>
             <div className="mb-5 items-center cursor-pointer">
-            <h4 className="text-red-500 pb-4 ">Useful Links</h4>
+            <h4 className="text-red-500 pb-4 ">Our Partners</h4>
             <ul className="text-gray-500">
               <li className="pb-4"><span className="flex items-center flex-row hover:text-yellow-500 "><Link to={""} > </Link> <BsChevronBarRight/>FOD LIVINGS</span></li>
               <li className="pb-4"><span className="flex items-center flex-row hover:text-yellow-500"><Link to={"booking"}></Link><BsChevronBarRight/>KHOZZO</span> </li>
