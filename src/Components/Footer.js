@@ -44,10 +44,10 @@ const Footer = () => {
             <div className="mb-5 items-center cursor-pointer">
             <h4 className="text-red-500 pb-4 ">Useful Links</h4>
             <ul className="text-gray-500">
-              <li className="pb-4"><span className="flex items-center flex-row hover:text-yellow-500 "><Link to={""} > </Link> <BsChevronBarRight/>HOME</span></li>
-              <li className="pb-4"><span className="flex items-center flex-row hover:text-yellow-500"><Link to={"booking"}></Link><BsChevronBarRight/>BOOKING</span> </li>
-              <li className="pb-4"><span className="flex items-center flex-row hover:text-yellow-500"><Link to={"login"}> </Link><BsChevronBarRight/>LOGIN</span></li>
-              <li className="pb-4"><span className="flex items-center flex-row hover:text-yellow-500"><Link to={"register"}> </Link><BsChevronBarRight/>REGISTER</span></li>
+              <li className="pb-4"><span className="flex items-center flex-row hover:text-yellow-500 "><Link to={""} > </Link> <BsChevronBarRight/>FOD LIVINGS</span></li>
+              <li className="pb-4"><span className="flex items-center flex-row hover:text-yellow-500"><Link to={"booking"}></Link><BsChevronBarRight/>KHOZZO</span> </li>
+              <li className="pb-4"><span className="flex items-center flex-row hover:text-yellow-500"><Link to={"login"}> </Link><BsChevronBarRight/>ROHIT</span></li>
+              <li className="pb-4"><span className="flex items-center flex-row hover:text-yellow-500"><Link to={"register"}> </Link><BsChevronBarRight/>SKY LIVINGS</span></li>
             </ul>
             </div>
             <div className="mb-5">
