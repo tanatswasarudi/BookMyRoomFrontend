@@ -18,9 +18,9 @@ const DataProduct = useSelector((state)=>state.product.productList)
     <div className='w-full'>
            <div className='w-full md:h-[400px] h-[250px]'><img src={banner} className='w-full h-full' alt=''/></div>  
 
-        <div className='md:flex grid md:grid-cols-2 grid-cols-1  gap-4  py-3 px-2 overflow-scroll scrollbar-none '>
+        <div className='md:flex grid md:grid-cols-2 grid-cols-1  gap-4  py-3 px-2 md:px-10 overflow-scroll scrollbar-none '>
          
-          <div className='md:w-1/2 md:p-4 '>
+          <div className='md:w-1/2 md:p-4  '>
             <div className='min-w-[300px] max-w-[300px] bg-slate-200 p-2 rounded-2xl shadow shadow-black flex flex-col overflow-scroll scrollbar-none'>
             <div className='w-60 min-h-[180px] px-2'><Link to={"login"}><img src={book} alt='' className='h-full w-full'/></Link></div>
             <p className="text-black my-4 shadow rounded-2xl border-t items-center border-primary font-bold text-2xl">Register <span>For More Apartments!!!</span> </p>
