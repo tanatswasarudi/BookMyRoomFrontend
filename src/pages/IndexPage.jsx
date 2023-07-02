@@ -29,7 +29,7 @@ const DataProduct = useSelector((state)=>state.product.productList)
            
           </div>
 
-          <div className='w-1/2 md:flex md:flex-wrap md:gap-y-7 gap-6 md:p-4  grid grid-cols-1 overflow-scroll scrollbar-none '>
+          <div className='w-1/2 md:flex md:flex-wrap md:gap-y-7 gap-6 md:p-4  grid grid-cols-1 '>
           {
             homeProductCartList[0] ?
             homeProductCartList.map(el =>{
