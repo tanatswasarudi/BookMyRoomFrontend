@@ -20,7 +20,7 @@ const DataProduct = useSelector((state)=>state.product.productList)
 
         <div className='md:flex grid md:grid-cols-2 grid-cols-1  gap-4  py-3 px-2 overflow-scroll scrollbar-none '>
          
-          <div className='w-1/2 md:p-4 '>
+          <div className='md:w-1/2 md:p-4 '>
             <div className='min-w-[300px] max-w-[300px] bg-slate-200 p-2 rounded-2xl shadow shadow-black flex flex-col overflow-scroll scrollbar-none'>
             <div className='w-60 min-h-[180px] px-2'><Link to={"login"}><img src={book} alt='' className='h-full w-full'/></Link></div>
             <p className="text-black my-4 shadow rounded-2xl border-t items-center border-primary font-bold text-2xl">Register <span>For More Apartments!!!</span> </p>
@@ -29,7 +29,7 @@ const DataProduct = useSelector((state)=>state.product.productList)
            
           </div>
 
-          <div className='w-1/2 md:flex md:flex-wrap md:gap-y-7 gap-6 md:p-4  grid grid-cols-1 '>
+          <div className='md:w-1/2 md:flex md:flex-wrap md:gap-y-7 gap-6 md:p-4 px-2 grid grid-cols-1 '>
           {
             homeProductCartList[0] ?
             homeProductCartList.map(el =>{
