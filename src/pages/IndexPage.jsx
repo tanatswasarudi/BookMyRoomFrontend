@@ -4,6 +4,7 @@ import Homecard from '../Components/Homecard';
 import banner from '../Assets/banner3.jpg'
 import book from '../Assets/book.gif'
 import { Link } from 'react-router-dom';
+import {MdOutlineApartment} from 'react-icons/md'
 
 
 const IndexPage = () => {
@@ -22,8 +23,8 @@ const DataProduct = useSelector((state)=>state.product.productList)
          
           <div className='md:w-1/2 md:p-4  '>
             <div className='min-w-[300px] max-w-[300px] bg-slate-200 p-2 rounded-2xl shadow shadow-black flex flex-col overflow-scroll scrollbar-none'>
-            <div className='w-[270px] min-h-[210px] px-2'><Link to={"login"}><img src={book} alt='' className='h-full w-full'/></Link></div>
-            <p className="text-black my-4 shadow rounded-2xl border-t items-center border-primary font-bold text-2xl">Register <span>For More Apartments!!!</span> </p>
+            <div className='w-[280px] min-h-[210px] px-2'><Link to={"login"}><img src={book} alt='' className='h-full w-full'/></Link></div>
+            <Link to={"register"} className="flex flex-col text-black mt-2 mb-4 shadow rounded-2xl border-t items-center border-primary font-bold text-2xl"> <MdOutlineApartment className='text-2xl'/>Register <span>For More Apartments!!!</span> </Link>
             <div className='mt-4'><Link to={"login"} className='w-[150px] flex p-2 items-center rounded-full shadow bg-primary'>View Apartments</Link></div>
             </div>
            
