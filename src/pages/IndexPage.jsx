@@ -20,7 +20,7 @@ const DataProduct = useSelector((state)=>state.product.productList)
         </div>
         <div className='md:flex gap-4 py-3 overflow-scroll scrollbar-none '>
           <div className='w-1/2'>
-            <div className='shadow'><Link to={"login"}><img src={book} alt='' className=''/></Link></div>
+            <div className='shadow w-23 h-20'><Link to={"login"}><img src={book} alt='' className='h-full w-full'/></Link></div>
           </div>
           <div className='w-1/2 flex flex-wrap gap-y-7 gap-6 p-4 mt-8 justify-center'>
           {
