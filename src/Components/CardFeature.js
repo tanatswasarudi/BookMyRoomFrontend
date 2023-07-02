@@ -17,7 +17,7 @@ const CardFeature = ({title,address,photos,price, description,id,loadingArray}) 
               </div>
             )}
           </div>
-          <div className=' h-44 w-44 justify-center items-center grow shrink-0'> 
+          <div className=' h-44 md:w-44 w-60 justify-center items-center grow shrink-0'> 
           {photos && photos.length > 0 ? (
               <img src={photos[1]} className="h-full rounded-2xl  " alt='' />
             ) : (
@@ -26,7 +26,7 @@ const CardFeature = ({title,address,photos,price, description,id,loadingArray}) 
               </div>
             )}
           </div>
-          <div className='h-44 w-60 justify-center items-center grow shrink-0'> 
+          <div className='h-44 md:w-60 w-60 justify-center items-center grow shrink-0'> 
           {photos && photos.length > 0 ? (
               <img src={photos[2]} className="h-full rounded-2xl " alt='' />
             ) : (

@@ -1,6 +1,6 @@
 import React from 'react'
 import {  useSelector } from "react-redux";
-import CardFeature from '../Components/CardFeature';
+import Homecard from '../Components/Homecard';
 import banner from '../Assets/banner3.jpg'
 import book from '../Assets/book.gif'
 import { Link } from 'react-router-dom';
@@ -15,40 +15,43 @@ const DataProduct = useSelector((state)=>state.product.productList)
   
   return (
     <div className='w-full'>
-       <div className='w-full'>
-       <div className='mb-4 grid md:grid-cols-2 grid-cols-1 gap-2 cursor-pointer w-full '>
-           <div><img src={banner} className='' alt=''/></div>
-           <div><Link to={'login'} className=" cursor-pointer"><img src={book} className='' alt=''/></Link></div>  
+       <div className='mb-4 cursor-pointer w-full '>
+           <div><img src={banner} className='' alt=''/></div>  
         </div>
-        
-            <div className='flex md:grid md:grid-cols-2 gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all'>
-            {
+        <div className='md:flex gap-4 py-3 overflow-scroll scrollbar-none '>
+          <div className='w-1/2'>
+            <div className='shadow'><Link to={"login"}><img src={book} alt='' className=''/></Link></div>
+          </div>
+          <div className='w-1/2 flex flex-wrap gap-y-7 gap-6 p-4 mt-8 justify-center'>
+          {
             homeProductCartList[0] ?
             homeProductCartList.map(el =>{
               return(
-                <CardFeature
-                key={el._id} 
+                <Homecard
+                key={el._id}
                 id={el._id}
                 photos={el.photos}
+                address={el.address}
                 title={el.title}
                 price={el.price}
-                address={el.address}
-                description={el.description}
+                
                 />
               )
             }) 
             :
             LoadingArray.map((el,index)=>{
               return(
-                <CardFeature
+                <Homecard
                 key={index}
                 loadingArray={"loading..."}
                 />
               )
             })
          }
-            </div>
+          </div>
+
         </div>
+       
     </div>
   )
 }
