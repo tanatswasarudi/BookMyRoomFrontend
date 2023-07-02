@@ -53,7 +53,7 @@ console.log(subpage)
     </nav>
     {subpage === 'accommodation'&& (
         <div className="mt-10 w-full">
-            <div className=' gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all grid grid-cols-1 md:grid-cols-2   mt-10 shadow-lg w-full'>
+            <div className=' p-4 gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all grid grid-cols-1 md:grid-cols-2   mt-10 shadow-lg w-full'>
             {
             homeProductCartList[0] ?
             homeProductCartList.map(el =>{
