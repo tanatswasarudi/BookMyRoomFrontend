@@ -16,6 +16,7 @@ const AccountPage = () => {
 const userData = useSelector((state) => state.user);
 const DataProduct = useSelector((state)=>state.product.productList)
   console.log(DataProduct)
+  
   const homeProductCartListPG = DataProduct.filter(el => el.category === "lawgate",[])
   console.log(homeProductCartListPG)
 
@@ -56,7 +57,7 @@ console.log(subpage)
     </nav>
     {subpage === 'accommodation'&& (
         <div className="mt-10 w-full">
-            <AllProduct heading={"Accomodation"}/>
+            <AllProduct />
             <div className=' p-4 gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all grid grid-cols-1 md:grid-cols-2   mt-10 shadow-lg w-full'>
             {
             homeProductCartListPG[0] ?

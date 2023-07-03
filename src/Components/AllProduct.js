@@ -3,7 +3,7 @@ import FilterProduct from './FilterProducts'
 import CardFeature from './CardFeature'
 import { useSelector } from 'react-redux'
 
-const AllProduct = ({heading}) => {
+const AllProduct = () => {
     const DataProduct = useSelector((state)=>state.product.productList)
     const categoryList = [...new Set(DataProduct.map(el=>el.category))]
   console.log(categoryList)
@@ -25,11 +25,7 @@ const handleFilterProduct = (category, )=>{
   })
 }
   return (
-    <div className='my-7'>
-    <h2 className='font-bold text-2xl text-slate-950 mb-8'>
-      {heading}
-    </h2>
-
+    <div className='my-7 mb-8'>
     <div className='flex gap-6 justify-center overflow-scroll scrollbar-none'>
       {
         categoryList[0] && categoryList.map(el =>{
