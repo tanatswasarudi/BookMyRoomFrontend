@@ -30,7 +30,7 @@ const handleFilterProduct = (category, )=>{
       {heading}
     </h2>
 
-    <div className='flex gap-6 justify-center overflow-scroll'>
+    <div className='flex gap-6 justify-center overflow-scroll scrollbar-none'>
       {
         categoryList[0] && categoryList.map(el =>{
           return(

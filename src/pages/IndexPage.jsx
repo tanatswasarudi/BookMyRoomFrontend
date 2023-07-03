@@ -10,7 +10,7 @@ import {MdOutlineApartment} from 'react-icons/md'
 const IndexPage = () => {
 const DataProduct = useSelector((state)=>state.product.productList)
   console.log(DataProduct)
-  const homeProductCartList = DataProduct.slice(4,8)
+  const homeProductCartList = DataProduct.slice(1,4)
 
   const LoadingArray = new Array(4).fill(null)
 

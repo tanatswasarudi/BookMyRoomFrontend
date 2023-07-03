@@ -56,6 +56,7 @@ console.log(subpage)
     </nav>
     {subpage === 'accommodation'&& (
         <div className="mt-10 w-full">
+            <AllProduct heading={"Accomodation"}/>
             <div className=' p-4 gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all grid grid-cols-1 md:grid-cols-2   mt-10 shadow-lg w-full'>
             {
             homeProductCartListPG[0] ?
@@ -84,7 +85,7 @@ console.log(subpage)
             })
          }
             </div>
-            <AllProduct heading={"Accomodation"}/>
+
 
         </div>
     )}
