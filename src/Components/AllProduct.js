@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import FilterProduct from './FilterProduct'
+import FilterProduct from './FilterProducts'
 import CardFeature from './CardFeature'
 import { useSelector } from 'react-redux'
 
