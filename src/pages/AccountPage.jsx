@@ -10,12 +10,15 @@ import { useDispatch} from "react-redux";
 import { logoutRedux } from "../redux/userSlice";
 import {BiUserMinus}from 'react-icons/bi'
 import welcome from '../Assets/welcome.gif'
+import AllProduct from '../Components/AllProduct';
 
 const AccountPage = () => {
 const userData = useSelector((state) => state.user);
 const DataProduct = useSelector((state)=>state.product.productList)
   console.log(DataProduct)
-  const homeProductCartList = DataProduct
+  const homeProductCartListPG = DataProduct.filter(el => el.category === "lawgate",[])
+  console.log(homeProductCartListPG)
+
   const LoadingArray = new Array(4).fill(null)
   const dispatch = useDispatch();
   const handleLogout = () => {
@@ -55,14 +58,15 @@ console.log(subpage)
         <div className="mt-10 w-full">
             <div className=' p-4 gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all grid grid-cols-1 md:grid-cols-2   mt-10 shadow-lg w-full'>
             {
-            homeProductCartList[0] ?
-            homeProductCartList.map(el =>{
+            homeProductCartListPG[0] ?
+            homeProductCartListPG.map(el =>{
               return(
                 <CardFeature
                 key={el._id}
                 id={el._id}
                 photos={el.photos}
                 title={el.title}
+                category={el.category}
                 price={el.price}
                 address={el.address}
                 description={el.description}
@@ -80,6 +84,8 @@ console.log(subpage)
             })
          }
             </div>
+            <AllProduct heading={"Accomodation"}/>
+
         </div>
     )}
     {

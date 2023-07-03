@@ -15,6 +15,7 @@ const PlacesPage = () => {
         address : "",
         photos : [],
         perks : [],
+        category : "",
         description : "",
         price: "",
         MaxGuests:"",
@@ -56,8 +57,8 @@ const PlacesPage = () => {
           const handleSubmit = async(e) =>{
             e.preventDefault()
           
-              const {title,address,photos,price,MaxGuests, description} = data;
-              if(title && address && photos && price &&MaxGuests && description){
+              const {title,address,photos,price,MaxGuests,category, description} = data;
+              if(title && address && category && photos && price &&MaxGuests && description){
                 const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/uploadProduct`,{
                   method : "POST", 
                   headers :{
@@ -73,6 +74,7 @@ const PlacesPage = () => {
                   return{
                      title : "",
                      address : "",
+                     category : "",
                      photos : [],
                      perks : [],
                      description : "",
@@ -92,7 +94,15 @@ const PlacesPage = () => {
         <h1 className=' text-2xl mt-4'>Title</h1>
         <p className='text-sm text-gray-500 mb-2'>Title of the apartment</p>
         <input type={"text"} name='title' className='w-full border rounded'  onChange={handleOnChange} value={data.title}/>
-
+       
+        <label htmlFor='category' className=' text-2xl mt-4'>Category</label>
+        <select className='w-full border rounded' id='category' name='category' onChange={handleOnChange} value={data.category}>
+          <option value={"other"} className='text-sm text-gray-500'>Select Category</option>
+          <option value={"lawgate"}>Lawgate</option>
+          <option value={"jalandhar"}>Jalandhar</option>
+          <option value={"rama mandi"}>Rama Mandi</option>
+          <option value={"phagwara"}>Phagwara</option>
+          </select>
         <h1 className=' text-2xl mt-4'>Address</h1>
         <p className='text-sm text-gray-500 mb-2'>Address to this place</p>
         <input type='text' name='address'className='w-full border rounded' placeholder=''  onChange={handleOnChange} value={data.address}/>
@@ -149,7 +159,7 @@ const PlacesPage = () => {
         </div>
         <h1 className=' text-2xl mt-4' >Price</h1>
         <p className='text-gray-500 text-sm mb-2'>Add the price for this Apartment</p>
-        <div className=' flex items-center w-full border rounded-full '>
+        <div className=' flex items-center w-full border rounded-full gap-2 '>
         <span className=''><ImPriceTag/></span>
         <input type={"price"} name='price'className='outline-none' onChange={handleOnChange} value={data.price}/>
         </div>
