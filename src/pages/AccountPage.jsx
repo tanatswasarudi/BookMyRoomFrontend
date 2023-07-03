@@ -63,7 +63,7 @@ console.log(subpage)
     {
       subpage === 'profile' && (
         <div className='mt-10 flex flex-col items-center justify-center bg-slate-100 shadow'>
-        <div className='font-serif inline-flex items-center'>  <span className='text-2xl text-black '>Hello </span><span className='text-base text-black'> {userData.name}</span></div>
+        <div className='font-serif inline-flex items-center gap-2'>  <span className='text-2xl text-black '>Hello </span><span className='text-2xl text-black'> {userData.name}</span></div>
           <p className='text-base my-4 flex items-center'> 
             {
               userData.email ? (
@@ -90,7 +90,7 @@ console.log(subpage)
       )
     }
     {
-      subpage === 'booking' && (
+      subpage === 'bookings' && (
             <div className='mt-10 w-full'>
               <div className=' p-4 gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all grid grid-cols-1 md:grid-cols-2   mt-10 shadow-lg w-full'>
             {
