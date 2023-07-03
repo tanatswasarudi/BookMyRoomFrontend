@@ -16,7 +16,7 @@ useEffect(()=>{
 },[DataProduct])
 
 const LoadingArray = new Array(4).fill(null)
-const handleFilterProduct = (category, )=>{
+const handleFilterProduct = (category )=>{
   const filter = DataProduct.filter(el=>el.category.toLowerCase() === category.toLowerCase())
   setDataFilter(()=>{
     return[

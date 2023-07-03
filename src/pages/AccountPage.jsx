@@ -16,7 +16,7 @@ const AccountPage = () => {
 const userData = useSelector((state) => state.user);
 const DataProduct = useSelector((state)=>state.product.productList)
   console.log(DataProduct)
-  
+
   const homeProductCartListPG = DataProduct.filter(el => el.category === "lawgate",[])
   console.log(homeProductCartListPG)
 
@@ -58,36 +58,6 @@ console.log(subpage)
     {subpage === 'accommodation'&& (
         <div className="mt-10 w-full">
             <AllProduct />
-            <div className=' p-4 gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all grid grid-cols-1 md:grid-cols-2   mt-10 shadow-lg w-full'>
-            {
-            homeProductCartListPG[0] ?
-            homeProductCartListPG.map(el =>{
-              return(
-                <CardFeature
-                key={el._id}
-                id={el._id}
-                photos={el.photos}
-                title={el.title}
-                category={el.category}
-                price={el.price}
-                address={el.address}
-                description={el.description}
-                />
-              )
-            }) 
-            :
-            LoadingArray.map((el,index)=>{
-              return(
-                <CardFeature
-                key={index}
-                loadingArray={"loading..."}
-                />
-              )
-            })
-         }
-            </div>
-
-
         </div>
     )}
     {
@@ -121,9 +91,36 @@ console.log(subpage)
     }
     {
       subpage === 'booking' && (
-        <div className='pt-10 text-lg font-serif text-black'>
-             Coming Soon
-        </div>
+            <div className='mt-10 w-full'>
+              <div className=' p-4 gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all grid grid-cols-1 md:grid-cols-2   mt-10 shadow-lg w-full'>
+            {
+            homeProductCartListPG[0] ?
+            homeProductCartListPG.map(el =>{
+              return(
+                <CardFeature
+                key={el._id}
+                id={el._id}
+                photos={el.photos}
+                title={el.title}
+                category={el.category}
+                price={el.price}
+                address={el.address}
+                description={el.description}
+                />
+              )
+            }) 
+            :
+            LoadingArray.map((el,index)=>{
+              return(
+                <CardFeature
+                key={index}
+                loadingArray={"loading..."}
+                />
+              )
+            })
+         }
+            </div>
+            </div>
       )
     }
 
