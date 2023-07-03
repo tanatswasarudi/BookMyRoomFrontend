@@ -9,14 +9,14 @@ const AllProduct = ({heading}) => {
   console.log(categoryList)
 
   //filter data display
-  const [filterby,setFilterBy] = useState("")
 const [dataFilter,setDataFilter] = useState([])
 
 useEffect(()=>{
   setDataFilter(DataProduct)
 },[DataProduct])
 
-const handleFilterProduct = (category)=>{
+const LoadingArray = new Array(4).fill(null)
+const handleFilterProduct = (category, )=>{
   const filter = DataProduct.filter(el=>el.category.toLowerCase() === category.toLowerCase())
   setDataFilter(()=>{
     return[

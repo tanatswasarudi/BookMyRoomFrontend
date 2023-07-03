@@ -8,7 +8,7 @@ const Homecard = ({ title, photos,address, price, loadingArray,id }) => {
         <>
         <Link to={ `/booking/${id}`} onClick={()=>window.scrollTo({top:"0",behavior : "smooth"})}>
           <div className="w-[260px] min-h-[180px] px-2 rounded-2xl">
-            <img src={photos[0]} className="h-full w-full" />
+            <img src={photos[0]} className="h-full w-full" alt="" />
           </div>
           <h2 className='text-lg font-serif font-bold text-blue-400'>{title}</h2>
           <p className='font-bold my-2'>{address}</p>
