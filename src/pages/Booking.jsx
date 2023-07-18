@@ -39,7 +39,7 @@ const Booking = () => {
         const fetchRes = await fetchDta.json()
         console.log(fetchRes)
         toast(fetchRes.message)
-        const message = `Hello, I would like to book the place. My details are:\n\nGuests: ${data.guests}\nPhone: ${data.phone}\nName: ${data.name}\nCheck-in: ${data.checkin}`;
+        const message = `Hello, I would like to book the place. My details are:\n\nGuests: ${data.guests}\nPhone: ${data.phone}\nName: ${data.name}\nCheck-in: ${data.checkin}\nNameofApartment: ${productDisplay.title}`;
         const whatsappURL = `https://wa.me/+918264420815?text=${encodeURIComponent(message)}`;
         window.open(whatsappURL, '_blank');
         setData (()=>{
@@ -149,7 +149,7 @@ const Booking = () => {
                
                <div className='flex mb-4 text-lg px-5 '>
                 <label className='font-serif font-bold mb-2'>Price:</label>
-              <span className='text-red-500'>$</span> {productDisplay.price}
+              <span className='text-red-500'>₹</span> {productDisplay.price}
                </div>
               <button className='px-4 py-2 bg-primary rounded-2xl' >Book this Place</button>
               </form>
