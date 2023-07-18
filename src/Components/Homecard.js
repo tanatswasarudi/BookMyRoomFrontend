@@ -12,7 +12,7 @@ const Homecard = ({ title, photos,address, price, loadingArray,id }) => {
           </div>
           <h2 className='text-lg font-serif font-bold text-blue-400'>{title}</h2>
           <p className='font-bold my-2'>{address}</p>
-          <p className=" font-bold my-2"><span className='text-red-500'>$</span>{price}</p>
+          <p className=" font-bold my-2"><span className='text-red-500'>₹</span>{price}</p>
           <button className="w-[150px]  p-2 items-center rounded-full border-t border-yellow-500 shadow bg-primary">Book</button>
           </Link>
         </>

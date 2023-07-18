@@ -42,7 +42,7 @@ const CardFeature = ({title,address,photos,price, description,id,loadingArray}) 
           <p className='font-bold mb-2'>{address}</p>
           <h2 className='text-sm font-serif font-bold text-blue-400'>{title}</h2>
           <p className='text-sm flex flex-col mb-2'>{description}</p>
-          <p className=" font-bold"><span className='text-red-500'>$</span>{price}</p>
+          <p className=" font-bold"><span className='text-red-500'>₹</span>{price}</p>
           <p className='mt-4'><button className='p-2 flex items-center rounded bg-green-500 hover:bg-green-700'>View More<PiDotsThreeCircleDuotone className='text-gray-500 text-sm'/></button></p>
           </div>
         </Link>
