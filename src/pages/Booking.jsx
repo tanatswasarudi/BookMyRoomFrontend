@@ -125,7 +125,7 @@ const Booking = () => {
                <span>{productDisplay.MaxGuests}</span>
              </div> 
              <div className='flex font-bold mb-4'>
-              <span className='text-red-500'>$</span>{productDisplay.price}
+              <span className='text-red-500'>₹</span>{productDisplay.price}
             </div>
       </div>
       <div className="bg-white flex flex-col shadow p-4 rounded-2xl w-full">
