@@ -1,7 +1,7 @@
 import React from 'react'
 import {  useSelector } from "react-redux";
 import Homecard from '../Components/Homecard';
-import banner from '../Assets/banner3.jpg'
+import banner from '../Assets/Booking.jpg'
 import book from '../Assets/book.gif'
 import { Link } from 'react-router-dom';
 import {MdOutlineApartment} from 'react-icons/md'
