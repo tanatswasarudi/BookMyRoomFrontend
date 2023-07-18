@@ -17,7 +17,7 @@ const DataProduct = useSelector((state)=>state.product.productList)
   
   return (
     <div className='w-full'>
-           <div className='w-full md:h-[400px] h-[250px]'><img src={banner} className='w-full h-full' alt=''/></div>  
+           <div className='w-full md:h-[450px] h-[250px]'><img src={banner} className='w-full h-full' alt=''/></div>  
 
         <div className='md:flex grid md:grid-cols-2 grid-cols-1  gap-4  py-3 px-2 md:px-10 overflow-scroll scrollbar-none '>
          
