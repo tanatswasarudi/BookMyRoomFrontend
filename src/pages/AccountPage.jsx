@@ -62,7 +62,7 @@ console.log(subpage)
     )}
     {
       subpage === 'profile' && (
-        <div className='mt-10 flex flex-col items-center justify-center bg-slate-100 shadow'>
+        <div className='mt-10 mb-4 flex flex-col items-center justify-center bg-slate-100 shadow'>
         <div className='font-serif inline-flex items-center gap-2'>  <span className='text-2xl text-black '>Hello </span><span className='text-2xl text-black'> {userData.name}</span></div>
           <p className='text-base my-4 flex items-center'> 
             {
